@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cy:open": "cypress open --e2e ",
-    "cy:run:chrome": "cypress run --browser chrome ",
+    "cy:run:chrome": "cypress run --browser chrome  --headed",
     "cy:run:edge": "cypress run --browser edge ",
     "cy.run:electron": "cypress run --browser electron "
   },
@@ -27,5 +27,9 @@
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix"
+  },
+  "dependencies": {
+    "cypress-multi-reporters": "^1.6.4",
+    "cypress-qase-reporter": "^1.4.3"
   }
 }

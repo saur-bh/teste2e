@@ -45,14 +45,23 @@ verifyStatus(status){
 
 };
 
-
+/**
+ * Function to  click button  the status of the invoice.
+ * @property {String} action value which needs to be entered either german / english
+ * @example
+ * invoice.clickactionItem('Abschließen');
+*/
 
 clickactionItem(action){
 
     switch (action) {
-        case ('Complete'|| 'Abschließen'):
-            ccy.get('.confirmation--box').contains(action).click();
+        case 'Abschließen':
+            cy.contains(action).click();
             break;
+        case 'Zustimmen' :
+            cy.contains(action).click();
+            break;
+        
     
     }
 

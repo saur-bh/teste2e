@@ -31,7 +31,10 @@ describe('Create Invoice Feature', function() {
 			invoice.description('This is test invoice');
 			invoice.clickSave();
 			invoice.verifyStatus('Entwurf');
-			invoice.clickactionItem('Abschließen')
+			invoice.clickactionItem('Abschließen');
+			invoice.clickactionItem('Zustimmen');
+			invoice.verifyStatus('Bezahlt');
+
 			
 
 	})
